@@ -10,6 +10,7 @@ server.get('/search/:name', function (req, res) {
         first_name: req.params.name+"xxx",
         last_name: "test xxx"
     }];
+    res.writeHead(200, {"Content-Type": "application/json"});
     res.end(JSON.stringify(response));
 })
 
